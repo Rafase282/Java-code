@@ -1,7 +1,8 @@
 /**
- * 
+ * Program that does a linear search
+ * for the maximum and minimum values
+ * of a list of integer from user input.
  */
-package maxmin;
 
 /**
  * @author rafase282
@@ -9,36 +10,27 @@ package maxmin;
  * CMP277
  * rafase282@gmail.com
  */
-public abstract class MaxMin {
+public class maxmin {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("The Maximum number is: "+max(args));
-		System.out.println("The Minimum number is: "+min(args));
-
-	}
-	public static int max(String[] args){
-		int nextNum,max;
-		max= Integer.parseInt(args[0]);
+		// TODO Auto-generated method stub
+		int nextNum,max,min;
+		max= min = Integer.parseInt(args[0]);
 		for (int i=1;i<args.length; i++){
 			nextNum=Integer.parseInt(args[i]);
 			if (nextNum>max){
 				max=nextNum;
 				}
-		}			
-		return max;
-  }
-	public static int min(String[] args){
-		int nextNum,min;
-		min= Integer.parseInt(args[0]);
-		for (int i=1;i<args.length; i++){
-			nextNum=Integer.parseInt(args[i]);
 			if (nextNum<min){
 				min=nextNum;
 			}
 		}
-		return min;
+		System.out.println("The Maximum number is: "+max);
+		System.out.println("The Minimum number is: "+min);
+
 	}
+
 }
